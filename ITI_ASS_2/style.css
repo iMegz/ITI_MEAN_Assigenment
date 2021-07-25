@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Cloister Black", sans-serif; */
+  font-family: "Courier New", Courier, monospace;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #54426b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e7dfc6;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-button {
+  background-color: #e7dfc6;
+}
+.min {
+  background-color: #d30000 !important;
+}
+.max {
+  background-color: #00d300 !important;
+}
+/* HEADER-START */
+header {
+  height: 10vh;
+  background-color: #54426b;
+}
+h1 {
+  padding: 5px;
+  font-size: 3.5em;
+  text-align: center;
+}
+/* HEADER-END */
+
+/* MAIN-START */
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 45vh;
+  padding: 3em;
+  background-color: #e7dfc6;
+}
+label,
+input,
+button {
+  font-size: 2em;
+  text-align: center;
+}
+input {
+  width: 50%;
+}
+button {
+  margin: auto;
+  width: 45%;
+  padding: 0.25em;
+  border: 2px solid #000000;
+  background-color: #e9f1f7;
+  border-radius: 15px;
+  cursor: pointer;
+}
+button:hover {
+  transition: background-color 0.25s;
+  background-color: #623cea98;
+}
+
+/* MAIN-END */
+
+/* SECTION-START */
+section {
+  background-color: #623cea;
+  min-height: 35vh;
+  padding-bottom: 1em;
+}
+h2 {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 2em;
+}
+h3 {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  border: solid #000 1px;
+  text-align: center;
+  font-size: 1.2em;
+  border-collapse: collapse;
+}
+tr {
+  border-top: solid 1px #000000;
+}
+th {
+  padding: 7px 0;
+  background-color: #54426b;
+}
+td {
+  padding: 5px;
+  text-transform: capitalize;
+}
+tr:nth-child(even) {
+  background-color: #dbd5b2;
+}
+tr:nth-child(odd) {
+  background-color: #e7dfc6;
+}
+/* SECTION-END */
+
+/* FOOTER-START */
+footer {
+  height: 10vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #54426b;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/* FOOTER-END */

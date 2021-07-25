@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("http://fonts.cdnfonts.com/css/cloister-black");
+    </style>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEISkDBCEpD0QhKN8EISjwQ+BocEPgKB8D4KgPBCDowwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQg6RHEISkpBCEo9wQg6T9EIKj/xGGp/8Xnsf/FZW8/xGJrP0PgqLcD4GhpBCDpEgAAAAAAAAAAAAAAAAQg6QBEIOkvxCEpP8QhKT/DYKj/wV+oP8Lg6X/Fq7e/xKx5P8Yr9//GqnW/xSUu/8QgaHBEIOjAgAAAAAAAAAAEIOjBhGDpM8HgKL/An2g/xOEpf9CmLH/MJSx/zy43/9Txen/I7Th/xCy5P8TpND/EIGh0A+DowYAAAAAAAAAAA+Eow4KgaLgQpqy/5rAy//P2Nv/9Ofj/2Kswf9vyeT//////+35/P+z5/f/PbTZ/wmAouIQg6QQAAAAAAAAAAAQg6QfAn6g8ZzCzP/r5OL/q8jQ/+De3v9qrsH/H63Z/3fR7v+45/X//////3nM5P8Bf6LyEIKjIQAAAAAAAAAAEIOkMA6Co/kvka3/IIqp/wuBo//O19n/crHD/xir2P8itOP/Banc/7ro9/+V1+z/AoGm+hCCozIAAAAAAAAAABCDpEIRhKT+CYGi/wh/of8UhKX/0dja/2Sswv9qx+T/+////9Dv+f/0/P//oN3w/wOEqf8PgaJDAAAAAAAAAAAQg6RUEIOk/xCDpP8NgqP/FIWl/9DY2v9krMH/bcjk///////S7/j/7vr9/6Hg8/8GiK7/D4GhVgAAAAAAAAAAEIOkZhCDpP8Qg6T/DYKj/xSFpf/R2Nr/ZK3C/3HJ5f/k9/3/HLHg/yCy4f8quOT/Eo+z/w+BoWcAAAAAAAAAABCDo3wQg6P/EIOk/w2Co/8UhqX/0dja/2Stwv9xyeX/5Pf9/xqx4P8OrN//ErDi/xSTuf8PgaB/AAAAABCDpAMQg6SVEIOk/xCDpP8NgqP/FIWl/9jc3P9orsP/b8jk///////J7ff/yu34/63m+P8Zmb7/DX+flxCDowUPg6MOEIOjpxCDo/8Qg6P/DoOj/xSFpf+yy9H/V6e+/1vC4v/d9Pz/3PP6/+D1+//J8Pv/IZ7F/wt/n6gQg6QQEIOkGxCDpLkQg6P/EIOj/xCEpP8QhKT/EIOj/xGGp/8br97/HrXm/x205P8dtOT/H7fp/xmhzP8PgaC7D4KjHQ6CozIOgqPQDoKj/w6Co/8OgqP/DoKj/wyAov8Ng6X/FJ7J/xSizf8Uocz/FKHM/xWjzv8UmL//DoGh0xKFpTUkka1QGYmozBaIp+AXiKfcF4in3BeIp9wXiKfcF4in3BeGpNwXhaTcF4ak3BeGpNwXhaTcFoal4BqJqc0ok69Q/n8AAOAHAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAA=="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="names.js" defer></script>
+    <script src="index.js" defer></script>
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <header>
+      <h1>Assignment 2</h1>
+    </header>
+    <main>
+      <label id="numberOfStudentsLabel" for="numberOfStudents"
+        >Number of students : 1</label
+      >
+      <input
+        oninput="viewNumberOfStudents()"
+        type="range"
+        value="1"
+        min="1"
+        max="200"
+        name="numberOfStudents"
+        id="numberOfStudents"
+      />
+      <div class="btns">
+        <button onclick="generateStudents()">Generate</button>
+        <button onclick="reset()">Reset</button>
+      </div>
+    </main>
+    <section>
+      <h2>Grades</h2>
+      <h3 id="avg">Total Average = 0</h3>
+      <table id="gradesTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Math</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>History</th>
+            <th>English</th>
+            <th>Average</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="empty">
+            <td colspan="9">No Data Found!</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>Made By : Ahmed Magdi</footer>
+  </body>
+</html>
