@@ -4,6 +4,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
 }
 header {
   height: 8vh;
@@ -33,8 +34,6 @@ ul {
 }
 li {
   display: block;
-  padding: 1em;
-  margin: 1em;
   border: 2px #222 solid;
   color: #222;
   text-align: center;
@@ -48,6 +47,7 @@ li:last-of-type {
   border-bottom-right-radius: 15px;
 }
 a {
+  padding: 1em;
   display: block;
   width: 100%;
   height: 100%;
