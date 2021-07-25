@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 header {
-  height: 8vh;
+  height: 5em;
   width: 100%;
   text-align: center;
   padding: 1vh;
@@ -17,6 +17,7 @@ header {
   align-items: center;
   color: #fff;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@ li {
   border: 2px #222 solid;
   color: #222;
   text-align: center;
+  margin: 1em;
 }
 li:first-of-type {
   border-top-left-radius: 15px;
