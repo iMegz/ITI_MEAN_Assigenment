@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  list-style: none;
+}
+header,
+footer {
+  height: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8e3b46;
+  text-transform: uppercase;
+  color: #e1dd8f;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+  width: 100%;
+  background-color: #e0777d;
+}
+
+#todo {
+  width: 60%;
+  height: 2em;
+  border: 2px solid #000;
+  outline: none;
+  padding: 0.5em;
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin: 0 1em;
+  text-transform: capitalize;
+}
+#add {
+  width: 20%;
+  height: 2em;
+  font-size: 1.5em;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#add:hover {
+  transition: all 0.2s;
+  background-color: #000;
+  color: #fff;
+}
+@media only screen and (max-width: 650px) {
+  main {
+    flex-flow: column;
+  }
+  #todo {
+    margin-bottom: 1em;
+  }
+  #add {
+    width: 50%;
+  }
+}
+section {
+  width: 100%;
+  min-height: calc(100vh - 20em);
+  background-color: #e1dd8f;
+  padding-bottom: 2em;
+}
+section h1 {
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+table {
+  width: 90%;
+  margin: auto;
+  border: solid #000 1px;
+  text-align: center;
+  font-size: 1.2em;
+  border-collapse: collapse;
+}
+#todos {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #000;
+}
+.todo {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+.todo:nth-of-type(odd) {
+  background-color: #e0777d;
+}
+.todo:nth-of-type(even) {
+  background-color: #e6898d;
+}
+.checkBox,
+.delete {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+.delete {
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.delete:hover {
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #ff0000;
+  color: #fff;
+}
+.checkBox {
+  border: 2px dotted #000000;
+}
+.checkBox:hover {
+  background-color: #1a1a1a;
+}
+div.checked {
+  background-color: #1a1a1a;
+}
+span.checked {
+  text-decoration: line-through;
+}
+
+.task,
+.date {
+  display: inline-block;
+  font-weight: 600;
+}
+.task {
+  width: 20%;
+  text-transform: capitalize;
+
+  font-size: 1.5em;
+}
+.date {
+  margin-left: auto;
+}
+/* .checked{
+  background-color: ;
+} */
