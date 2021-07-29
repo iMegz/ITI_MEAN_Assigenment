@@ -12,4 +12,7 @@
 		<li>
           <a href="ITI_ASS_5/"> Assignment 5 : Todo List</a>
         </li>
+		<li>
+          <a href="ITI_ASS_6/"> Assignment 6 : Book Fair : PUG + Multer + MongoDB</a>
+        </li>
       </ul>
