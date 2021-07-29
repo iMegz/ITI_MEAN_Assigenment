@@ -1,0 +1,52 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/style.css")
+        link(href="/img/favicon.ico" rel="icon" type="image/x-icon")
+        script(src="/js/index.js" defer)
+        title Assignment 6
+    body
+        header
+            h1 Assignment 6 (PUG, Multer)
+        main
+            h2 Add New Books
+            <div class="row">
+                div
+                    form(action="/add", method="post" enctype="multipart/form-data") 
+                        div(class="row")
+                            label(for="title") Title : 
+                            input(type="text" name="title" autocomplete="off")
+                        div(class="row")
+                            label(for="author") Author : 
+                            input(type="text" name="author" autocomplete="off")
+                        div(class="row")
+                            label(for="image") Image
+                                button(id="urlOrFile" type="button") Url 
+                                span :
+
+                            input(oninput="onChangeImage()" type="url"
+                            name="image" id="image" autocomplete="off" 
+                            accept="image/jpg, image/png, image/jpeg")
+                        div(class="row")
+                            input(type="submit" value="Add" id="add")
+            div
+                img(id="preview" src="/img/default.jpg" alt="preview")
+        section(id="booksList" class="grid")
+            if !books.length
+                span(id="noBooks") No books found!
+            else 
+                each book in books
+                    div(id=`${book.id}` class="item")
+                        button(class="close" id=`${book.id}`) 
+                            a(href=`/delete/${book.id}`) X
+                        h2= book.title
+                        img(src=`${book.image}` alt=`${book.title}`)
+                        div(class="info")
+                            h3= book.author
+                            h5= book.date
+                            
+        footer
+            h4 Made by : Ahmed Magdi
+
